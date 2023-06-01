@@ -3,13 +3,11 @@ import { useEffect, useState } from "react"
 
 export const DockList = () => {
     const [docks, changeDockState] = useState([])
-    const [loading, changeLoadingState] = useState("Loading...")
 
     const fetchDocks = async () => {
         const response = await fetch("http://localhost:8088/docks")
         const docks = await response.json()
         changeDockState(docks)
-        changeLoadingState("Done loading")
     }
 
     useEffect(() => {
@@ -17,10 +15,9 @@ export const DockList = () => {
     }, [])
 
     return <>
-        <h2>{loading}</h2>
         <ul>
             {
-                docks.map(dock => <li>{dock.location}</li>)
+                docks.map(dock => <li key={`dock-${dock.id}`}>{dock.location}</li>)
             }
         </ul>
     </>

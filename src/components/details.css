@@ -1,0 +1,29 @@
+.details {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+}
+
+.detail--column {
+    flex-basis: 24%;
+    margin: 0 2rem;
+    padding: 1rem;
+    border: 2px dotted rgb(217, 249, 255);
+}
+
+.assignments {
+    padding: 1rem 5rem;
+    font-size: large;
+}
+
+ul {
+    list-style-type: none;
+    margin-block-start: 0;
+    padding-inline-start: 0;
+}
+
+li {
+    background-color: azure;
+    margin: 0.4rem 0;
+    padding: 0.33rem;
+}

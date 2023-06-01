@@ -18,7 +18,7 @@ export const ShippingShipList = () => {
     return <>
         <ul>
             {
-                ships.map(ship => <li>{ship.name}</li>)
+                ships.map(ship => <li key={`ship-${ship.id}`}>{ship.name}</li>)
             }
         </ul>
     </>

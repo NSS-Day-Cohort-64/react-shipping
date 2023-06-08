@@ -27,3 +27,8 @@ li {
     margin: 0.4rem 0;
     padding: 0.33rem;
 }
+
+.hauler__ship {
+    background-color: goldenrod;
+    border: 2px solid lime;
+}
